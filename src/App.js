@@ -1,5 +1,9 @@
 import { lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import './App.css';
+import LandingPage from './layouts/LandingPage/LandingPage';
+import LoginPage from './layouts/LoginPage/LoginPage';
+import RegisterPage from './layouts/RegisterPage/RegisterPage';
 
 const Header = lazy(() => import('./layouts/Header'));
 const MainImages = lazy(() => import('./layouts/MainImages'));
@@ -22,6 +26,22 @@ function App() {
       </div>
     }
   >
+      <Router>
+      <div>
+        {}
+        <Switch>
+          <Route exact path="/">
+            <LandingPage /> 
+          </Route>
+          <Route exact path="/login">
+            <LoginPage /> 
+          </Route>
+          <Route exact path="/register">
+            <RegisterPage />
+          </Route>
+        </Switch>
+      </div>
+    </Router>  
       <div>
         <Header />
       <main>

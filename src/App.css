@@ -35,12 +35,12 @@ img {
     cursor: pointer;
     transition: 500ms ease;
 }
-button {
+/* button {
 	border: 0;
 	background: transparent;
     cursor: pointer;
     margin-left: auto;
-}
+} */
 a {
     text-decoration: none;
     color:#000
