@@ -1,22 +1,17 @@
 import { 
     LOGIN_USER,
-<<<<<<< HEAD
     REGISTER_USER, 
     AUTH_USER,
     LOGOUT_USER,
     ADD_TO_CART,
     GET_CART_ITEMS,
-    REMOVE_CART_ITEM
-=======
-    REGISTER_USER 
->>>>>>> e40f3e29f1ed722cc2a6ce73f1c047032c973774
+    REMOVE_CART_ITEM,
 } from '../_actions/types';
 
 export default function (state = {}, action) {
     switch (action.type) {
         case LOGIN_USER:
                 return {...state, loginSuccess: action.payload }
-<<<<<<< HEAD
         case REGISTER_USER:    
                 return {...state, register: action.payload }  
         case AUTH_USER:    
@@ -39,12 +34,10 @@ export default function (state = {}, action) {
                                 cart: action.payload.cart
                         }
                 }
-=======
-            break;
+        //     break;
         case REGISTER_USER:    
                 return {...state, register: action.payload }  
-            break;
->>>>>>> e40f3e29f1ed722cc2a6ce73f1c047032c973774
+        //     break;
         default:
             return state;
     }

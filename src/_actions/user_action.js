@@ -1,7 +1,6 @@
 import axios from 'axios';
 import {
     LOGIN_USER,
-<<<<<<< HEAD
     REGISTER_USER,
     AUTH_USER,
     LOGOUT_USER,
@@ -24,27 +23,23 @@ export function registerUser(dataTosubmit) {
 }
 
 
-export function loginUser(dataTosubmit) {
+// export function loginUser(dataTosubmit) {
 
-    const request = axios.post(`${USER_SERVER}/login`, dataTosubmit)
-        .then(response =>  response.data);
-=======
-    REGISTER_USER
-} from './types';
+//     const request = axios.post(`${USER_SERVER}/login`, dataTosubmit)
+//         .then(response =>  response.data);
+//     REGISTER_USER
+// } from './types';
 
 export function loginUser(dataTosubmit) {
 
     const request = axios.post('/api/users/login', dataTosubmit)
         .then(response =>  response.data)
->>>>>>> e40f3e29f1ed722cc2a6ce73f1c047032c973774
 
         return {
             type: LOGIN_USER,
             payload: request
         }
 }
-
-<<<<<<< HEAD
 
 export function auth() {
 
@@ -131,15 +126,3 @@ export function removeCartItem(imageId){
     }
 }
 
-=======
-export function registerUser(dataTosubmit) {
-
-    const request = axios.post('/api/users/register', dataTosubmit)
-        .then(response =>  response.data)
-
-        return {
-            type: REGISTER_USER,
-            payload: request
-        }
-}
->>>>>>> e40f3e29f1ed722cc2a6ce73f1c047032c973774

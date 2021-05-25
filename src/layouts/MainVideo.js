@@ -1,6 +1,5 @@
 import React from 'react'
 import mainmp4 from '../videos/Train - 3880.mp4'
-<<<<<<< HEAD
 import { motion } from 'framer-motion'
 
 const Mainvideo = () => {
@@ -25,12 +24,6 @@ const Mainvideo = () => {
             transition={{duration: 1}}
             className ='maininfo'
             >ROUTE DE VISSIGEN</motion.p>
-=======
-
-const Mainvideo = () => {
-    return (
-        <div className ='mainvideo'>
->>>>>>> e40f3e29f1ed722cc2a6ce73f1c047032c973774
            <video autoPlay loop muted>
                <source src={mainmp4} type="video/mp4" />
            </video>

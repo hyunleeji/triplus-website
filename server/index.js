@@ -4,15 +4,10 @@ const port = 5000;
 const bodyParser  = require('body-parser');
 const cookieParser = require('cookie-parser');
 const config = require('./config/key');
-<<<<<<< HEAD
-const { auth } = require('./middleware/auth')
 const path = require("path");
 const cors = require('cors')
-const { User } = require("../server/models/User");
-=======
 const { User } = require("./models/User");
 const { auth } = require('./middleware/auth')
->>>>>>> e40f3e29f1ed722cc2a6ce73f1c047032c973774
 
  //application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: true}));
@@ -20,17 +15,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-<<<<<<< HEAD
 const mongoose = require('mongoose');
-=======
-const mongoose = require('mongoose')
->>>>>>> e40f3e29f1ed722cc2a6ce73f1c047032c973774
+
 mongoose.connect(config.mongoURI, {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
 }).then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err))
 
-<<<<<<< HEAD
 
 app.use('/api/users', require('./routes/user'));
 app.use('/api/images', require('./routes/Images'));
@@ -38,15 +29,12 @@ app.use('/api/images', require('./routes/Images'));
 app.use('/uploads', express.static('uploads'));
 
 
-=======
->>>>>>> e40f3e29f1ed722cc2a6ce73f1c047032c973774
 app.get('/', (req, res) => 
   res.send('Hello World! 안녕하세요 헤이헤이! 편해다!!'))
 
 app.get('/api/hello', (req, res) => 
   res.send("안녕하세요! ~"))
 
-<<<<<<< HEAD
 // //1. 회원가입을 위한 라우터
 // //회원 가입 할때 필요한 정보들을 client에서 가져오면 그것들을 데이터베이스에 넣어준다. 
 // app.post('/api/users/register', (req, res) => {
@@ -162,7 +150,6 @@ app.get('/api/hello', (req, res) =>
 //      }
 //   })
 // });
-=======
 //1. 회원가입을 위한 라우터
 //회원 가입 할때 필요한 정보들을 client에서 가져오면 그것들을 데이터베이스에 넣어준다. 
 app.post('/api/users/register', (req, res) => {
@@ -233,7 +220,6 @@ app.get('/api/users/logout', auth, (req, res) => {
         })
       })
 })
->>>>>>> e40f3e29f1ed722cc2a6ce73f1c047032c973774
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)

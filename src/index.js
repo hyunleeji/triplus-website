@@ -8,11 +8,7 @@ import { applyMiddleware, createStore } from 'redux';
 import promiseMiddleware from 'redux-promise';
 import ReduxThunk from 'redux-thunk';
 import Reducer from './_reducers';
-<<<<<<< HEAD
 import { BrowserRouter } from "react-router-dom";
-
-=======
->>>>>>> e40f3e29f1ed722cc2a6ce73f1c047032c973774
 
 //1. 어플리케이션에 redux 연결!
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore)
@@ -24,13 +20,9 @@ ReactDOM.render(
           window.__REDUX_DEVTOOLS_EXTENSION__()
         )}
     >
-<<<<<<< HEAD
         <BrowserRouter>
         <App />
         </BrowserRouter>
-=======
-        <App />
->>>>>>> e40f3e29f1ed722cc2a6ce73f1c047032c973774
     </Provider>
 , document.getElementById('root'));
 
