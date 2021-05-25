@@ -1,0 +1,27 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: url("../src/fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  src: url("../src/fonts/Montserrat-Bold.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

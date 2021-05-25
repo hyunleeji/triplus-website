@@ -1,0 +1,40 @@
+import React, { Suspense } from 'react';
+import { Route, Switch } from "react-router-dom";
+import './App.css';
+import LandingPage from './layouts/LandingPage/LandingPage';
+import LoginPage from './layouts/LoginPage/LoginPage';
+import RegisterPage from './layouts/RegisterPage/RegisterPage';
+import Region from './layouts/BestRegion/Region';
+import Okinawa from './layouts/MainImages/Okinawa';
+import Auth from './hoc/auth';
+import Navbar from './layouts/Navbar/navbar';
+import Footer from './layouts/Footer';
+import ImageUploadPage from './layouts/ImageUploadPage/ImageUploadPage';
+import ImageDetailPage from './layouts/ImageDetailPage/ImageDetailPage'
+import CartPage from './layouts/CartPage/CartPage'
+import BestRegionPage from './layouts/BestRegionPage/BestRegionPage'
+
+function App() {
+  return (
+    <Suspense fallback={(<div>Loading...</div>)}>
+    <Navbar />
+      <div style={{ minHeight: 'calc(100vh - 80px)', paddingTop: '60px' }}>
+        <Switch>
+          <Route exact path="/" component={Auth(LandingPage, null )} />
+          <Route exact path="/login" component={Auth(LoginPage, false)} /> 
+          <Route exact path="/register" component={Auth(RegisterPage, false)} /> 
+          <Route exact path="/images/upload" component={Auth(ImageUploadPage, true)} /> 
+          <Route exact path="/images/bestregion" component={Auth(BestRegionPage, null)} /> 
+          <Route exact path="/images/:imagesId" component={Auth(ImageDetailPage, null)} /> 
+          <Route exact path="/user/cart" component={Auth(CartPage, true)} /> 
+          
+          <Route exact path="/region" component={Auth(Region, null)}/> 
+          <Route exact path="/okinawa" component={Auth(Okinawa, null)}/> 
+        </Switch>
+      </div>
+    <Footer />  
+</Suspense>
+  );
+}
+
+export default App;

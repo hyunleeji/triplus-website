@@ -1,0 +1,628 @@
+body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+div, span, article, section, header, footer, aside, p, ul, li, fieldset, legend, label, a, nav, form {
+	box-sizing: border-box;
+}
+ol, ul, li {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* td,th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+} */
+img {
+	max-width: 100%;
+	height: auto;
+    border: 0;
+    cursor: pointer;
+    transition: 500ms ease;
+}
+/* button {
+	border: 0;
+	background: transparent;
+    cursor: pointer;
+    margin-left: auto;
+} */
+a {
+    text-decoration: none;
+    color:#000
+}
+
+.body {
+  font-family: Circular, Helvetica, Verdanna, Arial, NBG, sans-serif;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.navbar {
+  position: relative;
+  height: 4rem;
+  background-color: rgb(5, 43, 35);
+  color: #000;
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 100%);
+  transition: all 0.3s;
+}
+.navbar.active {
+  background-color: #000;
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 100%);
+  transition: all 0.3s;
+}
+.menubar {
+  margin: 0 2rem;
+}
+.logo {
+  position: absolute;
+  height: 4rem;
+  left:50%;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: #eee;
+  font-weight: 700;
+}
+.leftmenu {
+  top:20%;
+  height: 0;
+}
+nav a{
+  color:#eee;
+}
+.rightmenu {
+  float: right;
+  display: flex;
+  align-items: center;
+  height: 4rem;
+}
+.rightmenu li a {
+  margin: 0 0.5rem;
+}
+.country-all {
+  margin-top: 5rem;
+}
+.country-all ul {
+  display: flex;
+  flex-direction: column;
+  color:#eee;
+  margin-left: 12px;
+}
+.country-wrap {
+  display: flex;
+  color:#eee
+}
+.country-wrap ul {
+  display: block;
+}
+.mainvideo {
+  height: 100vh;
+  position: relative;
+}
+.maininfo, .maincountry {
+  position: absolute;
+  font-size: 80px;
+  font-weight: 100;
+  color: rgb(255, 255, 255);
+  top: 65%;
+  left: 7%;
+}
+.maincountry {
+  font-weight: 400;
+  font-size: 100px;
+  top: 55%;
+}
+.mainvideo video {
+  width: 100%;
+  left:50%;
+  top:50%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  /* position: absolute; */
+   /* transform: translate(-50%, -50%); */
+}
+.mainimage {
+  width: 100vw;
+  height: calc(100vh - 76px);
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.mainimage li {
+  width: 50%;
+  float: left;
+  position: relative;
+}
+.mainimage p {
+  width: 80%;
+  position: absolute;
+  left:calc(10% - 0px);
+  top:35%;
+  text-align: center;
+  font-size: 2.5rem;
+  color:#eee;
+  display: block;
+}
+.mainimage a {
+  width: 80%;
+  position: absolute;
+  bottom: 15%;
+  left:calc(50% - 100px);
+  border: 2px solid #eee;
+  background-color: rgb(240, 240, 240);
+  padding: 15px 0;
+  width: 220px;
+  text-align: center;
+}
+.mainimage p span {
+  font-size: 5rem;
+}
+.mainimage li img {
+  height: 100vh;
+  min-width: 100%;
+  max-width: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  display: block;
+}
+.mainimage li p {
+  position: absolute;
+}
+.section {
+  margin: 10rem 0;
+}
+.max {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+/* .regionimg-bg {
+  background-color: #363636;
+  position: relative;
+} */
+.regionimg {
+    background-image: url(../src/images/Marburg_an_der_Lahn.jpg);
+    width: 100%;
+    object-fit: cover;
+    background-position: 50% 70%;
+    background-color: #555555;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    /* position: absolute; */
+    opacity: 0.7;
+    background-blend-mode: overlay;
+}
+.heading {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 200;
+  margin: 7rem 0;
+}
+.info {
+  display: block;
+}
+.info strong {
+  display: block;
+  margin-bottom: 1rem;
+}
+.info p {
+  font-size: 1.5rem;
+}
+.thumbnail {
+  overflow: hidden;
+}
+.thumbnail img {
+  width: 600px;
+  height: 600px;
+  max-width: none;
+}
+.subimage {
+  height: calc(100vh - 201px);
+  position: relative;
+}
+.subimage p, .subimage h4 {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 20%;
+  font-size: 5rem;
+  color: #eee;
+  font-weight: 700;
+}
+.subimage h4 {
+  top: 5%;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: right;
+  margin-right: 2rem;
+}
+.subimage a {
+  max-width: 1800px;
+  width: 200px;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  font-size: 1rem;
+  bottom: 13%;
+  color: #eee;
+  display: block;
+  border: 1px solid #eee;
+} 
+.subimage img {
+  width: 100%;
+  left:50%;
+  top:50%;
+  height: 900px;
+  object-fit: cover;
+}
+.subvideo video {
+  width: 100%;
+  left:50%;
+  top:50%;
+  height: 600px;
+  object-fit: cover;
+  z-index: -1;
+}
+.triplus {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 20rem 0;
+}
+.triplus strong {
+  font-weight: 600;
+}
+.footer {
+  width: 100%;
+  height: 300px;
+  background-color: #282c34;
+  padding: 2.5rem 10rem;
+  display: flex;
+  color:#eee
+}
+.leftft {
+  width: 20%;
+  margin-right: auto;
+}
+.leftft strong {
+  padding-bottom: 2rem;
+  display: block;
+  font-size: 2rem;
+}
+.rightftall {
+  float: right;
+}
+.rightft {
+  float: left;
+  margin-left: auto;
+  padding-right: 5rem;
+}
+.rightft li a {
+  color:#eee;
+}
+.name {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.bestwrapper {
+  display: flex;
+  justify-content: center;
+}
+.ranking span {
+  font-size: 3rem;
+  color:#54d4c3ea;
+  font-weight: 500;
+}
+.slideimg {
+  overflow: hidden;
+  transition: .4s ease-in-out;
+}
+.slideimg:hover {
+  transform: scale(1.1);
+  transition: .4s;
+}
+/* .tabs {
+  transition: all 0.3s ease;
+}
+.tabs li{
+  transition: all 0.3s ease;
+} */
+.tabs .active {
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.menubar h2{
+  padding: 0 24px 0 23px;
+  text-align: left;
+  height: 40px;
+}
+.menubar h2 a{
+  display: inline-block;
+  position: relative;
+  top:50%;
+  left:0;
+}
+.categoryopen {
+  background-color: #000;
+  max-width: 1800px;
+}
+.allmenu {
+  background-color: #000;
+  max-width: 1800px;
+  display: block;
+  margin: 1rem 0;
+  position: absolute;
+  width: 160px;
+}
+.continent {
+  position: absolute;
+  background-color: #000;
+  height: 400px;
+  width: 160px;
+}
+.continent li {
+  margin: 2rem 1rem;
+}
+.category {
+  display: block;
+  position: absolute;
+  width: 500px;
+  height: 400px;
+}
+.category ul li{
+  margin: 2rem 1rem;
+}
+.country {
+  left: 160px;
+  position: absolute;
+  width: 500px;
+  background-color: #000;
+  height: 400px;
+}
+.mainimage a:hover, .subimage a:hover {
+  font-weight: 700;
+}
+.transport img {
+  width: 12%;
+}
+/* .first {
+  font-size: 4rem !important; 
+  font-weight: 700;
+} */
+input {
+  width: 350px;
+  height: 45px;
+  margin: 0 0 20px 0 !important;
+  border: 1px solid #ddd;
+}
+button {
+  height: 45px;
+}
+.regionbg {
+  width: 100vh;
+}
+.regionone {
+  display: flex;
+  margin: 5rem 0;
+}
+.regioncountry {
+  display: flex;
+  flex-direction: row;
+}
+.regioncountry p {
+  width: 30%;
+  height: 34px;
+  border: 1px solid rgba(177, 145, 129, 0.3);
+  margin-right: 0.7rem;
+  text-align: center;
+  border-radius: 2rem;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .regioncountry p:nth-child(2) {
+  background: rgb(141, 80, 80);
+} */
+.regiontext {
+  margin-left: 2rem;
+}
+.regioninfo {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+.regioninfo h2 {
+  font-size: 3rem;
+}
+.regioninfo p span {
+  font-size: 2rem;
+}
+.regioninfo span {
+  font-size: 0.7rem;
+  margin-bottom: 3rem;
+  font-weight: 400;
+  line-height: 2;
+}
+.regioninfo button {
+  background: rgb(16, 52, 131);
+  color: #fff;
+  border: 1px solid rgb(16, 52, 131);
+  height: 50px;
+  padding: 0 2rem;
+  font-weight: 500;
+  width: 35%;
+  transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+.regioninfo button:hover {
+  background: transparent;
+  color: rgb(16, 52, 131);
+  border: 1px solid rgb(16, 52, 131);
+  font-weight: 500;
+  transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+.safety {
+  background: #dbe9ec;
+  width: 1300px;
+  height: 45px;
+  font-weight: 600;
+  color:#2f555f;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+.line {
+  width: 1300px;
+  height: 0.5px;
+  background: #000;
+  margin: 2rem 0;
+}
+.wrapper a {
+  margin: 0 2rem;
+  font-size: 2rem;
+  color: #7b7d81;
+  font-weight: 600;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+}
+.tabs li {
+  margin-right: 3rem;
+  border: 1px solid #7b7d81;
+  padding: 1rem;
+}
+.contentArea {
+  position: relative;
+}
+.topimage {
+  background-image: url(../src/images/japan1.jpg);
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  background-position: 50% 70%;
+  background-color: #61dafb;
+} 
+.okicontent {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 6rem;
+}
+.profile {
+  background-color:#e8e8e8;
+  width:45px;
+  height:45px;
+  border-radius:75px;
+  text-align:center;
+  font-size:12px;
+  vertical-align:middle;
+  line-height:150px;
+}
+.islandimg {
+  height: 300px;
+  background-position: center bottom;
+}
+.islandinfo {
+  display: flex;
+  justify-content: center;
+  margin: 5rem 0;
+  background: cornsilk;
+}
+.image-gallery-svg  {
+  width: 35px !important;
+  height: 35px !important;
+}
+.image-gallery-left-nav, .image-gallery-right-nav {
+  top:45% !important;
+}
+.image-gallery-fullscreen-button, .image-gallery-play-button {
+  bottom: 20px !important;
+}
+.swiper-container-horizontal>.swiper-scrollbar {
+  transform: scale(0.5) !important;
+}
+.ant-input-search > .ant-input-group > .ant-input-group-addon:last-child {
+    left: 3px !important;
+    top: -10px;
+}
+.swiper-slide-active {
+  margin: 0 auto;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
