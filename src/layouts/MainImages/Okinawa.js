@@ -23,7 +23,7 @@ function Okinawa() {
 
     const Okinawaisland = () => (
         okinawa && okinawa.map(value => (
-        <SwiperSlide>
+    <SwiperSlide>
         <li style={{ marginBottom: '3rem'}}>
         <div key='index' className='ranking'>
             <span className='first'></span>

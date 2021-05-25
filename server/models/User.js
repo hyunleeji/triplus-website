@@ -26,6 +26,7 @@ const userSchema = mongoose.Schema({
         type: Number,
         default: 0
     },
+<<<<<<< HEAD
     cart: {
         type: Array,
         default: []
@@ -34,6 +35,8 @@ const userSchema = mongoose.Schema({
         type: Array,
         default: []
     },
+=======
+>>>>>>> e40f3e29f1ed722cc2a6ce73f1c047032c973774
     image: String,
     token: {
         type: String
@@ -101,6 +104,7 @@ userSchema.statics.findByToken = function(token, cb) {
 
 }
 
+<<<<<<< HEAD
 // userSchema.methods.checkEmail = function (email, callback) {
 //     User.findOne({ email: email }, function (err, user) {
 //         console.log(user);
@@ -111,3 +115,8 @@ userSchema.statics.findByToken = function(token, cb) {
 const User = mongoose.model('User', userSchema)
 
 module.exports = { User };
+=======
+const User = mongoose.model('User', userSchema)
+
+module.exports = { User };
+>>>>>>> e40f3e29f1ed722cc2a6ce73f1c047032c973774

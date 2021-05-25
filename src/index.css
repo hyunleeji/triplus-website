@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "~react-image-gallery/styles/css/image-gallery.css";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
 
@@ -17,6 +18,11 @@
 body {
   margin: 0;
   font-family: 'Montserrat', 'Noto Sans KR', sans-serif !important;
+=======
+body {
+  margin: 0;
+  font-family: 'Montserrat', 'Noto Sans KR';
+>>>>>>> e40f3e29f1ed722cc2a6ce73f1c047032c973774
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
