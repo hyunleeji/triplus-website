@@ -3,10 +3,6 @@ import React from 'react'
 const Footer = () => {
     return (
         <div>
-        {/* <div className='triplus'>
-        <p>항상 가던곳은 지겨우세요?</p>
-        <p><strong>triplus</strong>는 새로운 장소를 추천해드립니다</p>
-        </div> */}
         <div className='footer'>
             <div className='leftft'>
                 <strong>triplus</strong>
@@ -36,26 +32,6 @@ const Footer = () => {
                     <li><a href='/'>인터파크</a></li>
                     <li><a href='/'>노랑풍선</a></li>
                 </ul>
-                {/* <div className='footersns'>
-                <ul>
-                    <a href='/' />
-                    <li><a href='#'>카테고리</a></li>
-                    <li><a href='#'>triplus story</a></li>
-                    <li><a href='#'>이벤트</a></li>
-                    <li><a href='#'>리뷰</a></li>
-                </ul>
-                <ul className='rightft two'>
-                    <li className='name'><a href='#'>고객센터</a></li>
-                    <li><a href='#'>Q & A</a></li>
-                    <li><a href='#'>FAQ</a></li>
-                    <li><a href='#'>공지사항</a></li>
-                </ul>
-                <ul className='rightft three'>
-                    <li className='name'><a href='#'>협력사</a></li>
-                    <li><a href='#'>하나투어</a></li>
-                    <li><a href='#'>인터파크</a></li>
-                    <li><a href='#'>노랑풍선</a></li>
-                </ul> */}
                 <div className='footersns'>
                     <a href='#'>
                         <img />
