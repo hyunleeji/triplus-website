@@ -1,4 +1,4 @@
-import React, { useState, useEffect, navbar } from 'react';
+import React, { useState } from 'react';
 import LeftMenu from './LeftMenu';
 import RightMenu from './RightMenu';
 import { Drawer, Button } from 'antd';
@@ -20,7 +20,7 @@ function NavBar() {
     }
   };
 
-  window.addEventListener('scroll', changeBackground);
+  // window.addEventListener('scroll', changeBackground);
 
   const showDrawer = () => {
     setVisible(true)

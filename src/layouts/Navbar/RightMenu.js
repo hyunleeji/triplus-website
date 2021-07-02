@@ -36,9 +36,9 @@ function RightMenu(props) {
     } else {
       return (
         <Menu mode={props.mode}>
-          <Menu.Item key="upload">
+          {/* <Menu.Item key="upload">
             <a href="/images/upload">Upload</a>
-          </Menu.Item>
+          </Menu.Item> */}
           <Menu.Item key="cart">
             <a href="/user/cart">장바구니</a>
           </Menu.Item>

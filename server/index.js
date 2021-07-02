@@ -28,6 +28,13 @@ app.use('/api/images', require('./routes/Images'));
 
 app.use('/uploads', express.static('uploads'));
 
+if(process.env.NODE_ENV === "production") {
+  app.use(express.static("../build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../build", "index.html"));
+  });
+}
 
 app.get('/', (req, res) => 
   res.send('Hello World! 안녕하세요 헤이헤이! 편해다!!'))

@@ -8,7 +8,7 @@ import Fade from "react-reveal/Fade";
 
 const Reservation = () => {
     return (
-        <div className='section'>
+        <div className='section' id='reservation'>
         <div className='reservation max'>
         <p className='heading'>Reservation</p>
         <ul className='bestwrapper'>
