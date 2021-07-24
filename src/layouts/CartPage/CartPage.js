@@ -51,13 +51,13 @@ function CartPage(props) {
     }
 
     return (
-        <div style={{ width: '70%', margin: '3rem auto' }}>
+        <div className="cartList">
             <div style={{ fontSize: '1.5rem' }}>My Cart</div>
             <hr />
             <TotalCartList carts={props.user.cartDetail} removeItem={removeCart}/>
             <div style={{ textAlign: 'end', margin: '2rem' }} >
                 <h2>총 결제금액 : ${CartInfo}</h2>
-                <Button style={{ width: '15%'}}color='black' type='button'>
+                <Button className="cartBtn" color='black' type='button'>
                 결제하기
                 </Button>
             </div>

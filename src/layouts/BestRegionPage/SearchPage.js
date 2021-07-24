@@ -13,10 +13,9 @@ function SearchPage(props) {
     }
 
     return (
-        <div>
+        <div className="searching">
             <Search placeholder="input search text"
             onChange={searchHandler}
-            style={{ width: '35%'}} 
             value={SearchTerm}
             />
         </div>

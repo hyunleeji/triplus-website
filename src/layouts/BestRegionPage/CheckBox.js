@@ -37,7 +37,7 @@ const renderCheckbox = () => props.list && props.list.map((value, index) => (
 
     return (
         <div>
-        <Collapse defaultActiveKey={['1']} style={{ width: '35%'}}>
+        <Collapse defaultActiveKey={['1']} className="check">
             <Panel header="Continents" key="1">
                 {renderCheckbox()}
             </Panel>

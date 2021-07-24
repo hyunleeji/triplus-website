@@ -130,14 +130,13 @@ function BestRegionPage() {
                 <p style={{ position : 'absolute', fontWeight: '300', fontSize: '1rem', bottom: '15px'}} className='heading'>지금 가장 많은 분들이 찾고있는 여행지입니다</p>
                 </div>
                 </div>
-                <div style={{ position: 'absolute', margin: '7rem'}}>
+                <div className='searchBox'>
                 <SearchPage refreshFunction={updataSearchTerm}/>
                 <CheckBox list={continents} handleFilters={filters => handleFilters(filters, "continents")}/><br/>
                 <RadioBox list={price} handleFilters={filters => handleFilters(filters, "price")} /><br/>
                 <MoodCheckBox list={mood} handleFilters={filters => handleFilters(filters, "mood")}/>
                 </div>
-                <ul style={{ flexWrap : 'wrap', width: '70%', float: 'right', margin: '6rem'}} 
-                className='bestwrapper'>
+                <ul className='bestwrapper'>
                 {BestRegionLists}
                 </ul>
             </div>

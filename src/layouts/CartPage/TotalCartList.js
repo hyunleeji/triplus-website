@@ -22,7 +22,7 @@ function TotalCartList(props) {
             //     <td>{cartlist.price}원</td>
             // </tr>
             <React.Fragment>
-            <div style={{ display: 'flex', margin:'0 2rem', justifyContent: 'space-around', textAlign: 'center', alignItems: 'center', margin: '2 0rem' }}key={index}>
+            <div className="cartItem" key={index}>
                 <div style={{ float: 'left' }}>
                     <img style={{ width: '100px', height: '70px'}} 
                     src={renderCartImage(cartlist.images) }/>
@@ -38,7 +38,7 @@ function TotalCartList(props) {
 
     return (
         <div>
-            <div style={{ display:'flex', justifyContent: 'space-around', textAlign: 'center', alignItems: 'center'}}>
+            <div className="totalList">
                 <span>상품정보</span>
                 <span>옵션</span>
                 <span>상품금액</span>

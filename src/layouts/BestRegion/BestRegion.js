@@ -61,7 +61,32 @@ function BestRegion() {
             <div className='bestregion max'> 
                 <p className='heading'>Best Region</p>
                 <ul className='bestwrapper'>
-                <Swiper spaceBetween={50} slidesPerView={3} scrollbar={{ hide: false }} pagination={{ clickable: true }} className="mySwiper">
+                <Swiper
+                scrollbar={{ hide: false }} 
+                pagination={{ clickable: true }}
+                breakpoints={{
+                    0: {
+                        slidesOffsetBefore: 5,
+                        slidesPerView: 1,
+                        spaceBetween: 8,
+                        centeredSlides: false,
+                    },
+                    500: {
+                        slidesOffsetBefore: 16,
+                        slidesPerView: 2,
+                        spaceBetween: 8,
+                        centeredSlides: false,
+                    },
+                    1300 : {
+                        slidesOffsetBefore: 16,
+                        slidesPerView: 3,
+                        spaceBetween: 8,
+                        centeredSlides: false,
+                    }
+                }}
+                className="mySwiper"
+                
+                >
                 {BestRegionLists}
                 </Swiper>
                 </ul>
